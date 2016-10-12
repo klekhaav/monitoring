@@ -1,0 +1,7 @@
+Django>=1.10.2
+rest_framework_jwt
+gunicorn
+psycopg2
+djangorestframework>=3.3.3
+djangorestframework-jwt>=1.8.0
+django-cors-headers>=1.1.0
