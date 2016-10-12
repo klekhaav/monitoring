@@ -5,15 +5,9 @@ init:
 
 update_db:
 	docker-compose up -d
-	docker exec docker_api_1 python manage.py makemigrations accounts currency rates order_n_billing
+	docker exec docker_api_1 python manage.py makemigrations accounts monitor
 	docker exec docker_api_1 python manage.py migrate
 	docker exec docker_api_1 python manage.py collectstatic --noinput
-	docker-compose stop
-
-upload:
-	docker-compose up -d
-	docker exec docker_api_1 python manage.py loaddata backup.json
-	docker exec docker_api_1 python manage.py loaddata rates_db.json
 	docker-compose stop
 
 clear:

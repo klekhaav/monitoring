@@ -1,15 +1,6 @@
-from datetime import datetime, timedelta
 from django.contrib.auth.models import PermissionsMixin, AbstractBaseUser, BaseUserManager
-from django.contrib.auth.tokens import default_token_generator
-from django.core.mail import EmailMessage
-from django.core.signing import TimestampSigner, b64_encode, b64_decode, SignatureExpired, BadSignature
-from django.conf import settings
 from django.db import models
-from django.template.loader import render_to_string
 from django.utils import timezone
-from django.utils.encoding import force_bytes
-from django.utils.http import base36_to_int, int_to_base36
-from django.utils.translation import ugettext_lazy as _
 
 
 # extended user manager

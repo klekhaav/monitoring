@@ -1,5 +1,4 @@
 from django.db import models
-from accounts.models import Customer
 
 
 HTTP = 'http'
@@ -13,7 +12,7 @@ protocol_choices = (
 
 # extended user manager
 class Server(models.Model):
-    user_email = models.OneToOneField(Customer)
+    user_email = models.CharField(max_length=255)
     title = models.CharField(max_length=255)
     address = models.CharField(max_length=150)
     protocol = models.CharField(max_length=100, choices=protocol_choices, default=HTTPS)

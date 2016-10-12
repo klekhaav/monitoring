@@ -10,5 +10,5 @@ class ServerListViewSet(viewsets.ModelViewSet):
     queryset = Server.objects.all()
     serializer_class = ServerSerializer
     authentication_classes = (JSONWebTokenAuthentication,)
-    permission_classes = (IsAuthenticated)
+    permission_classes = (IsAuthenticated,)
     filter_fields = ('id', 'user_email', 'title', 'address', 'protocol')
