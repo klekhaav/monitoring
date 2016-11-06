@@ -8,4 +8,5 @@ router.register(r'servers', views.ServerListViewSet, base_name='servers')
 
 urlpatterns = [
     url(r'^', include(router.urls)),
+    url(r'^info/(?P<user>.+)/(?P<host>.+)/(?P<port>.+)/$', views.ServerInfoView.as_view(), name='info'),
 ]

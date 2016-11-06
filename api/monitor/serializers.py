@@ -8,5 +8,5 @@ from .models import Server
 class ServerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Server
-        fields = ('id', 'user_email', 'title', 'address', 'protocol')
+        fields = '__all__'
         read_only_fields = ('id',)

@@ -140,13 +140,13 @@ USE_TZ = True
 
 # Media files
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'app', 'files', 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'api', 'files', 'media')
 MEDIA_URL = '/api/media/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'app', 'files', 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'api', 'files', 'static')
 STATIC_URL = '/api/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
