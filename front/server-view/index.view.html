@@ -1,0 +1,65 @@
+<div class="container-fluid">
+    <span><h2>Server {{ serverview.title }} Details</h2></span>
+    <form role="form" novalidate class="form-horizontal" name="orderViewForm">
+        <div class="form-group" >
+            <label for="id" class="col-sm-1 control-label">ID:</label>
+            <div class="col-sm-1">
+                <input type="text" class="form-control" id="id"
+                       placeholder="{{ serverview.id }}" readonly>
+            </div>
+
+            <label for="title" class="col-sm-1 control-label">Title:</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="title"
+                       placeholder="{{ serverview.title }}" readonly>
+            </div>
+            <div class="col-sm-1">
+                <button class="btn btn-danger" ng-click="back()" >Back</button>
+            </div>
+        </div>
+        <div>
+        <div class="form-group col-sm-6" >
+            <div fusioncharts width="600" height="400" type="column2d" datasource="{{dataSource}}"></div>
+            <p><a class="btn btn-primary" ng-click="updateMyChartData()">Update data</a></p>
+        </div>
+        </div>
+        <div class="form-group col-sm-6" >
+            <label for="server_time" class="col-sm-4 control-label">Server Time:</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="server_time"
+                       placeholder="{{ info.server_time }}" readonly>
+            </div>
+        </div>
+
+        <div class="form-group col-sm-6" >
+            <label for="boot_time" class="col-sm-4 control-label">Server Boot Time:</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="boot_time"
+                       placeholder="{{ info.boot_time }}" readonly>
+            </div>
+        </div>
+
+        <div class="form-group col-sm-6" >
+            <button class="btn btn-info col-sm-12" ng-click="showProcessList()" >Process List</button>
+        </div>
+
+        <div class="form-group col-sm-6" ng-if="showList">
+            <label> Search:   <input type="text" ng-model="searchText"></label>
+            <table class="table">
+                <thead class="thead-inverse">
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>PID</th>
+                </tr>
+                </thead>
+                <tr ng-repeat="item in info.process_list | filter:searchText | orderBy:'pid'">
+                    <th scope="row">{{$index + 1}}</th>
+                    <th>{{ item.name }}</th>
+                    <th>{{ item.pid }}</th>
+                </tr>
+            </table>
+        </div>
+    </form>
+
+</div>

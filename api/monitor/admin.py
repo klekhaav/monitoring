@@ -4,8 +4,8 @@ from .models import Server
 
 
 class ServerAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'user_email', 'title', 'address', 'port')
-    list_filter = ('id', 'title', 'user_email', 'title', 'address', 'port')
+    list_display = ('id', 'user_email', 'title', 'address', 'port')
+    list_filter = ('id', 'user_email', 'title', 'address', 'port')
     fieldsets = (
         ("User", {'fields': ('user_email',)}),
         ('Server info', {'classes': ('collapse',),

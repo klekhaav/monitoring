@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <span><h2>View My Orders</h2></span>
+    <div class="alert alert-warning alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        Enter server title to search
+    </div>
+
+    <label> Search:   <input type="text" ng-model="searchText"></label>
+
+    <table class="table">
+        <thead class="thead-inverse">
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Address</th>
+            <th>Port</th>
+            <th>Details</th>
+        </tr>
+        </thead>
+        <tr ng-repeat="item in serverslist | filter:searchText | orderBy:'-id'">
+            <th scope="row">{{$index + 1}}</th>
+            <th>{{ item.title }}</th>
+            <th>{{ item.address }}</th>
+            <th>{{ item.port }}</th>
+            <th>
+                <button type="button" class="btn btn-success btn-sm" ng-click="select(item)" >
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </button>
+            </th>
+        </tr>
+    </table>
+
+</div>

@@ -41,4 +41,8 @@ front_shell:
 front_shell_cur:
 	docker exec -it docker_front_1 bash
 
+sample_shell:
+	docker-compose run --rm sample-server bash
 
+sample_shell_cur:
+	docker exec -it docker_sample-server_1 bash
