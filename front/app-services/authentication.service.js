@@ -5,8 +5,8 @@
         .module('app')
         .factory('AuthenticationService', Service);
 
-    var API = "http://localhost:8000/api/"
-//    var API = "https://localhost/api/"
+//    var API = "http://localhost:8000/api/"
+    var API = "https://localhost/api/"
 
     function Service($http, $localStorage, $window) {
         var service = {};
