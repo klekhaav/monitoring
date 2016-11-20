@@ -1,5 +1,4 @@
 Django>=1.10.2
-rest_framework_jwt
 gunicorn
 psycopg2
 django-filter

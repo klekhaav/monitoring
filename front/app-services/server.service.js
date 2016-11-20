@@ -9,7 +9,7 @@
         .factory('ServerInfoService', ServerInfoService);
 
 //    var API = "http://localhost:8000/api/"
-    var API = "https://localhost/api/"
+    var API = "http://localhost/api/"
 
     function ServerListByUserService($http) {
         return {

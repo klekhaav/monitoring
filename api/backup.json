@@ -1,0 +1,1 @@
+[{"model": "accounts.customer", "pk": 1, "fields": {"password": "pbkdf2_sha256$30000$szA1b03PCPhY$ob0f7nliWyG3JVHgNKLovoXtVNK4mDJ4JtJ7FlyRPAM=", "last_login": null, "is_superuser": false, "email": "admin@monitoring.com", "is_active": true, "is_admin": true, "first_name": null, "last_name": null, "join_date": "2016-11-20T10:16:53.334Z", "groups": [], "user_permissions": []}}]
