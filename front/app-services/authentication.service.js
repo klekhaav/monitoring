@@ -6,7 +6,7 @@
         .factory('AuthenticationService', Service);
 
 //    var API = "http://localhost:8000/api/"
-    var API = "http://localhost/api/"
+    var API = "http://46.101.111.247/api/"
 
     function Service($http, $localStorage, $window) {
         var service = {};
